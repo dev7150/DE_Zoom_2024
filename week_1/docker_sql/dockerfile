@@ -1,0 +1,10 @@
+FROM python:3.10
+
+RUN apt-get install wget
+RUN pip install pandas fastparquet psycopg2 sqlalchemy
+
+WORKDIR /app
+
+COPY ingest_csv.py ingest_csv.py
+
+ENTRYPOINT [ "python","ingest_csv.py" ]
