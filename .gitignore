@@ -166,3 +166,4 @@ data_pgadmin/
 *.csv
 *.parquet
 *.csv.gz
+week_1/docker_sql/dataa/
