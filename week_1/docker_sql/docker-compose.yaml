@@ -17,7 +17,7 @@ services:
     volumes:
       - "./data_pgadmin:/var/lib/pgadmin"
     ports:
-      - "1234:80"
+      - "8080:80"
   # mageai:
   #   image: mageai/mageai
   #   ports:
