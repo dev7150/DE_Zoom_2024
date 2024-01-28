@@ -7,3 +7,4 @@ data_pgadmin
 .terraform
 .terraform.*
 week_1/terraform/terraform.tfstate
+week_1/terraform/terraform.tfstate.backup

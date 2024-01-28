@@ -8,3 +8,6 @@ WORKDIR /app
 COPY ingest_csv.py ingest_csv.py
 
 ENTRYPOINT [ "python","ingest_csv.py" ]
+
+# FROM python:3.9
+# ENTRYPOINT ["bash"]
