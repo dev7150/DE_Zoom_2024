@@ -4,3 +4,6 @@ data_pgadmin
 *.parquet
 *.csv
 .ipynb_checkpoints
+.terraform
+.terraform.*
+week_1/terraform/terraform.tfstate
