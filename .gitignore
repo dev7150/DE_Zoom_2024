@@ -2,3 +2,5 @@ dataa
 data_pgadmin
 *.csv.gz
 *.parquet
+*.csv
+.ipynb_checkpoints
