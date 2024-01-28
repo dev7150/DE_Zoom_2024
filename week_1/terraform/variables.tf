@@ -1,6 +1,6 @@
 variable "credentials" {
   description = "My Credentials"
-  default     = "C:/Users/X270/Downloads/dtc-de-410504-26e1c562211f.json"
+  default     = "/home/suzu.sharma/dtc-de-410504-63f95a125bca.json"
   #ex: if you have a directory where this file is called keys with your service account json file
   #saved there as my-creds.json you could use default = "./keys/my-creds.json"
 }
