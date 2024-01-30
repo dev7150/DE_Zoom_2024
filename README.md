@@ -14,7 +14,7 @@ This project is a data engineering and analytics pipeline implemented with Docke
 - [Google Cloud Platform](#google-cloud-platform)
 - [Python](#python)
 - [dbt (data build tool)](#dbt)
-- [Mage](#mage)
+- [Mage](https://github.com/dev7150/DE_Zoom_2024/tree/main/week_2)
 - [Contributing](#contributing)
 - [License](#license)
 
