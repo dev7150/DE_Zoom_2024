@@ -1,6 +1,8 @@
 
 The goal is to construct an ETL pipeline that loads the data, performs some transformations, and writes the data to a database (and Google Cloud!).
 
+![Alt text](image.png)
+
 - Creates a new pipeline, call it `green_taxi_etl`
 - Adds a data loader block and use Pandas to read data for the final quarter of 2020 (months `10`, `11`, `12`). The dataset is located [here](`https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/green/download`) 
 - loads the final three months using a for loop and `pd.concat`
@@ -73,6 +75,6 @@ Once exported, how many partitions (folders) are present in Google Cloud?
 * 67
 * 108
 
-## Submitting the solutions
+
 
 
