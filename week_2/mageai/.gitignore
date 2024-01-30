@@ -169,5 +169,11 @@ node_modules
 scratch*
 /mage_data*
 *secrets*.json
-magic-zoomcamp
+de-zoomcamp/*
+!de-zoomcamp/data_loaders
+!de-zoomcamp/pipelines
+!de-zoomcamp/transformers
+!de-zoomcamp/data_exporters
+
 *.json
+*.csv
