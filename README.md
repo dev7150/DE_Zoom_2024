@@ -31,7 +31,7 @@ Make sure you have the following tools installed on your local machine:
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone the repository: 
 
 ```bash
 https://github.com/dev7150/DE_Zoom_2024.git
