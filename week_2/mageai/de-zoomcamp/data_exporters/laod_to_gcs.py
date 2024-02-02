@@ -7,10 +7,10 @@ if 'data_exporter' not in globals():
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/dtc-de-410504-635094b69091.json"
 
-bucket_name = 'terraform-dtc-de-410504-terra-bucket'
+bucket_name = 'baltten'
 project_id = 'dtc-de-410504'
 
-table_name="nyc_green_taxi_data"
+table_name="nyc_green_taxi_data_2022"
 
 root_path=f'{bucket_name}/{table_name}'
 
@@ -25,6 +25,6 @@ def export_data_to_google_cloud_storage(data,*args,**kwargs):
     pq.write_to_dataset(
         table,
         root_path=root_path,
-        partition_cols=['lpep_pickup_date'],
+        # partition_cols=['lpep_pickup_date'],
         filesystem=gcs
     )

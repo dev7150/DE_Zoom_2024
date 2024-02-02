@@ -20,17 +20,17 @@ services:
       - 6789:6789
     volumes:
       - .:/home/src/
-      - ~/Documents/secrets/personal-gcp.json:/home/src/dtc-de-410504-635094b69091.json
+      - ~/Documents/secrets/personal-gcp.json:/home/suzu.sharma/DE_Zoom_2024/week_2/mageai/dtc-de-410504-635094b69091.json
     restart: on-failure:5
-  postgres:
-    image: postgres:14
-    restart: on-failure
-    container_name: ${PROJECT_NAME}-postgres
-    env_file:
-      - .env
-    environment:
-      POSTGRES_DB: ${POSTGRES_DBNAME}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    ports:
-      - "${POSTGRES_PORT}:5432"
+  # postgres:
+  #   image: postgres:14
+  #   restart: on-failure
+  #   container_name: ${PROJECT_NAME}-postgres
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     POSTGRES_DB: ${POSTGRES_DBNAME}
+  #     POSTGRES_USER: ${POSTGRES_USER}
+  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+  #   ports:
+  #     - "${POSTGRES_PORT}:5432"

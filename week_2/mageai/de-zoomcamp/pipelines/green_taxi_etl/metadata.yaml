@@ -21,7 +21,6 @@ blocks:
   downstream_blocks:
   - load_to_postgres
   - laod_to_gcs
-  - to_bq
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -66,31 +65,6 @@ blocks:
   upstream_blocks:
   - transform_green_taxi
   uuid: laod_to_gcs
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    data_provider: bigquery
-    data_provider_profile: dev
-    data_provider_schema: ny_taxi
-    data_provider_table: green_taxi
-    dbt: {}
-    disable_query_preprocessing: false
-    export_write_policy: append
-    limit: 1000
-    use_raw_sql: false
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: sql
-  name: to_bq
-  retry_config: null
-  status: failed
-  timeout: null
-  type: data_exporter
-  upstream_blocks:
-  - transform_green_taxi
-  uuid: to_bq
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -112,7 +86,7 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-01-30 02:43:50'
+updated_at: '2024-01-30T02:43:50+00:00'
 uuid: green_taxi_etl
 variables_dir: /home/src/mage_data/de-zoomcamp
 widgets: []
