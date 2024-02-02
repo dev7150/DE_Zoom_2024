@@ -34,7 +34,7 @@ tip_amount IS NOT NULL;
 -- CHECK FEATURES
 SELECT * FROM ML.FEATURE_INFO(MODEL `taxi-rides-ny.nytaxi.tip_model`);
 
--- EVALUATE THE MODEL
+-- EVALUATE MODEL
 SELECT
 *
 FROM
