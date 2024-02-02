@@ -11,7 +11,7 @@ This project is a data engineering and analytics pipeline implemented with Docke
 - [Folder Structure](#folder-structure)
 - [Docker](#docker)
 - [Terraform](#terraform)
-- [Google Cloud Platform]([#google-cloud-platform](https://github.com/dev7150/DE_Zoom_2024/tree/main/week_3))
+- [Google Cloud Platform](https://github.com/dev7150/DE_Zoom_2024/tree/main/week_3)
 - [Python](#python)
 - [dbt (data build tool)](#dbt)
 - [Mage](https://github.com/dev7150/DE_Zoom_2024/tree/main/week_2)
