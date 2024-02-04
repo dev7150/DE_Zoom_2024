@@ -1,3 +1,5 @@
+![image](https://github.com/dev7150/DE_Zoom_2024/assets/30797473/a64d3562-c012-4722-b866-7ad28c22799f)
+
 # Project Name
 
 ## Overview
