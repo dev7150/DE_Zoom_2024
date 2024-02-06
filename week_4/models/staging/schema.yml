@@ -8,4 +8,3 @@ sources:
     tables:
       - name: green_tripdata_partitoned_clustered
       - name: yellow_cab_data
-
