@@ -37,5 +37,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   taxi_rides_ny:
+    schema : dev
     # Applies to all files under models/example/
 
