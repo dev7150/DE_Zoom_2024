@@ -37,16 +37,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   taxi_rides_ny:
-    schema : dev
-    # Applies to all files under models/example/
-
+      # Applies to all files under models/.../
+      staging:
+          materialized: view
+      core:
+          materialized: table
 vars:
-  payment_type_values: [0,1,2,3,4,5,6]
+  payment_type_values: [0,1, 2, 3, 4, 5, 6]
 
-seeds:
-  taxi_rides_ny:
-    schema: dev
-    taxi_zone_lookup:
-      +column_types:
-        locationid: numeric
+seeds: 
+    taxi_rides_ny:
+        taxi_zone_lookup:
+            +column_types:
+                locationid: numeric
 
