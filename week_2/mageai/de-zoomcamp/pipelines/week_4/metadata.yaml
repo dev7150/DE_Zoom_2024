@@ -3,48 +3,51 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - laod_to_gcs
+  - curious_explorer
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: load_green_parquet
+  name: dlt_loader
   retry_config: null
   status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
-  uuid: load_green_parquet
-- all_upstream_blocks_executed: true
+  uuid: dlt_loader
+- all_upstream_blocks_executed: false
   color: null
   configuration:
-    file_source:
-      path: data_exporters/laod_to_gcs.py
+    data_provider: bigquery
+    data_provider_database: dtc-de-410504
+    data_provider_profile: default
+    data_provider_schema: week_4
+    export_write_policy: append
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: laod_to_gcs
+  name: curious explorer
   retry_config: null
   status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - load_green_parquet
-  uuid: laod_to_gcs
+  - dlt_loader
+  uuid: curious_explorer
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
 conditionals: []
-created_at: '2024-02-02 03:52:44.161794+00:00'
+created_at: '2024-02-12 03:12:55.410049+00:00'
 data_integration: null
 description: null
 executor_config: {}
 executor_count: 1
 executor_type: null
 extensions: {}
-name: green_taxi_2022_parquet
+name: week_4
 notification_config: {}
 remote_variables_dir: null
 retry_config: {}
@@ -54,7 +57,21 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-02-11 07:15:53'
-uuid: green_taxi_2022_parquet
+updated_at: '2024-02-12T07:33:00+00:00'
+uuid: week_4
+variables:
+  url:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
 variables_dir: /home/src/mage_data/de-zoomcamp
 widgets: []
