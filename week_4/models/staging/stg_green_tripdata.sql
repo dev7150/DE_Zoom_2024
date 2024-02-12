@@ -8,7 +8,7 @@ with tripdata as
 (
   select *,
     row_number() over(partition by vendorid, lpep_pickup_datetime) as rn
-  from {{ source('staging','green_tripdata_partitoned_clustered') }}
+  from {{ source('staging','green_cab_data') }}
   where vendorid is not null 
 )
 select
@@ -20,8 +20,8 @@ select
     {{ dbt.safe_cast("dolocationid", api.Column.translate_type("integer")) }} as dropoff_locationid,
     
     -- timestamps
-    cast(TIMESTAMP_MICROS( CAST(lpep_pickup_datetime / 1000 AS INT64)) as timestamp) AS pickup_datetime,
-    cast(TIMESTAMP_MICROS( CAST(lpep_dropoff_datetime / 1000 AS INT64)) as timestamp) AS dropoff_datetime,
+    CAST(lpep_pickup_datetime  as timestamp) AS pickup_datetime,
+    CAST(lpep_dropoff_datetime  as timestamp) AS dropoff_datetime,
     
     -- trip info
     store_and_fwd_flag,
@@ -45,7 +45,7 @@ where rn = 1
 
 
 -- dbt build --select <model_name> --vars '{'is_test_run': 'false'}'
-{% if var('is_test_run', default=true) %}
+{% if var('is_test_run', default=false) %}
 
   limit 100
 
