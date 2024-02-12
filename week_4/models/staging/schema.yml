@@ -3,11 +3,12 @@ version: 2
 sources:
   - name: staging
     database: dtc-de-410504
-    schema: ny_taxi
+    schema: week_4
 
     tables:
-      - name: green_tripdata_partitoned_clustered
+      - name: green_cab_data
       - name: yellow_cab_data
+      - name: fhv_2019
       
 models:
     - name: stg_green_tripdata
