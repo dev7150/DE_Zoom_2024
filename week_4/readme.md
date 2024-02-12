@@ -48,7 +48,7 @@ Similar to what we've done in fact_trips, keep only records with known pickup an
 Run the dbt model without limits (is_test_run: false).
 
 - 12998722
-- 22998722
+- 22998722 (ans)
 - 32998722
 - 42998722
 
