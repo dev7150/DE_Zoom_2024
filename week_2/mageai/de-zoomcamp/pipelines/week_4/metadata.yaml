@@ -10,12 +10,12 @@ blocks:
   language: python
   name: dlt_loader
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: dlt_loader
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     data_provider: bigquery
@@ -57,7 +57,7 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-02-12 07:33:12'
+updated_at: '2024-02-12 07:49:35'
 uuid: week_4
 variables:
   url:

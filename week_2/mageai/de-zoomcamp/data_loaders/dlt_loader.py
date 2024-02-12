@@ -27,7 +27,7 @@ def export_data_to_big_query(df: DataFrame, **kwargs) -> None:
 
     Docs: https://docs.mage.ai/design/data-loading#bigquery
     """
-    table_id = 'dtc-de-410504.week_4.green_cab_data'
+    table_id = 'dtc-de-410504.week_4.fhv_2019'
     config_path = path.join(get_repo_path(), 'io_config.yaml')
     config_profile = 'default'
 
@@ -67,15 +67,24 @@ def load_data(*args, **kwargs):
         'congestion_surcharge': 'float64'
     }
 
+    fhv_dtypes = {
+        "dispatching_base_num" : 'str',
+        "PUlocationID" : 'Int64',
+        "DOlocationID" : 'Int64',
+        "SR_Flag" : 'str',
+        "Affiliated_base_number" : 'str'
+    }
+    parse_dates_fhv = ["pickup_datetime","dropOff_datetime"]
+
     parse_dates_yellow_taxi = ['lpep_pickup_datetime', 'lpep_dropoff_datetime']
     var = kwargs['url']
     final_data = pd.DataFrame()
     url = 1
     while url < 13:
-        url_green_taxi_2022 = f'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-{url:02d}.csv.gz'
+        url_green_taxi_2022 = f'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/fhv/fhv_tripdata_2019-{url:02d}.csv.gz'
         print(url_green_taxi_2022)
         url += 1
-        df = pd.read_csv(url_green_taxi_2022, sep=',', compression='gzip', dtype=taxi_dtypes, parse_dates=parse_dates_yellow_taxi)
+        df = pd.read_csv(url_green_taxi_2022, sep=',', compression='gzip', dtype=fhv_dtypes, parse_dates=parse_dates_fhv)
         export_data_to_big_query(df)
             # final_data = pd.concat([final_data, df], ignore_index=True)
     return df    
