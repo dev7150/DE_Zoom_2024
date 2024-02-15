@@ -8,3 +8,4 @@ data_pgadmin
 week_1/terraform/terraform.tfstate
 week_1/terraform/terraform.tfstate.backup
 *.csv
+*.parquet.crc
