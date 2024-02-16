@@ -45,3 +45,5 @@ $ conda activate play_environment
 # use ipykernel to register your new environment as a kernel named
 # play environment
 (play_environment) $ python -m ipykernel install --user --name play_environment --display-name "play environment"
+
+sprk
