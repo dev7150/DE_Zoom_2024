@@ -1,0 +1,7 @@
+ SELECT
+    DeceasedDetails.DeceasedName.FamilyName AS Surname,
+ DeceasedDetails.DeceasedName.FirstGivenName AS FirstName,
+   DeceasedDetails.DeceasedName.OtherGivenNames AS Other_Name,
+  ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Death_ID
+ FROM
+   mccd.medical_certificate_cause_of_death;
