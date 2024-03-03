@@ -1,0 +1,1 @@
+{"Sensor_Name": "str", "SensingDateTime": "datetime64[ns, pytz.FixedOffset(600)]", "LocationID": "int64", "Direction_1": "int64", "Direction_2": "int64", "Total_of_Directions": "int64", "Latitude": "str", "Longitude": "str"}

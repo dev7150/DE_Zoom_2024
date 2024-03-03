@@ -1,0 +1,82 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - trans
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_csv
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_csv
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    data_provider: bigquery
+    data_provider_database: dtc-de-410504
+    data_provider_profile: default
+    data_provider_schema: foot_traffics
+    export_write_policy: append
+  downstream_blocks:
+  - bq_python_loader
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: trans
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_csv
+  uuid: trans
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/bq_python_loader.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: bq_python_loader
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - trans
+  uuid: bq_python_loader
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-03-02 07:43:09.284326+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: draconic meadow
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+updated_at: '2024-03-03 02:57:38'
+uuid: draconic_meadow
+variables_dir: /home/src/mage_data/magic-zoomcamp
+widgets: []
