@@ -11,3 +11,4 @@ week_1/terraform/terraform.tfstate.backup
 *.parquet.crc
 *.crc
 _SUCCESS
+*.json
